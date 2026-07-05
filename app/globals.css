@@ -1,0 +1,30 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  ::selection {
+    background-color: rgba(59, 130, 246, 0.3) ;
+  }
+
+  * {
+  }
+}
+
+@layer components {
+  /* A row of film-sprocket perforations, used to frame the image canvas
+     so the result reads like a strip of developed film. */
+  .sprocket-row {
+    background-image: repeating-linear-gradient(
+      to right,
+      currentColor 0px,
+      currentColor 6px,
+      transparent 6px,
+      transparent 18px
+    );
+    background-size: 18px 3px;
+    background-repeat: repeat-x;
+    height: 3px;
+    opacity: 0.25;
+  }
+}
