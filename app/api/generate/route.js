@@ -1,3 +1,4 @@
+console.log("API ROUTE IS WORKING");
 export const runtime = "nodejs";
 import { NextResponse } from "next/server";
 import { getImageProvider } from "@/lib/imageProviders";
@@ -12,6 +13,8 @@ const MAX_PROMPT_LENGTH = 1000;
 export async function POST(request) {
   try {
     const body = await request.json();
+
+    console.log("REQUEST BODY:",body);
     const prompt = typeof body?.prompt === "string" ? body.prompt.trim() : "";
 
     if (!prompt) {
