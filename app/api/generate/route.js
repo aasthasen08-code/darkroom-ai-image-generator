@@ -13,10 +13,9 @@ const MAX_PROMPT_LENGTH = 1000;
 export async function POST(request) {
   try {
     const body = await request.json();
-    
-    throw new Error("TEST ERROR");
-
+  
     console.log("REQUEST BODY:",body);
+    
     const prompt = typeof body?.prompt === "string" ? body.prompt.trim() : "";
 
     if (!prompt) {
